@@ -40,7 +40,7 @@ impl Config {
     }
 }
 
-fn search<'a>(wordlist: &'a str, hash: String) -> Option<&'a str> {
+fn search(wordlist: &str, hash: String) -> Option<&str> {
     wordlist
         .lines()
         .find(|line| hash.contains(&encode_text(line)))
